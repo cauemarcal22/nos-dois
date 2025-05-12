@@ -1,0 +1,125 @@
+
+header {
+  background: linear-gradient(135deg, #ff4e50, #d81e5b);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+  position: relative;
+  z-index: 2;
+}
+
+/* Estilo das seções */
+section {
+  width: 100%;
+  max-width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px); /* Pequeno efeito de elevação ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito parallax para as seções */
+section:nth-child(even) {
+  background: linear-gradient(135deg, rgba(255, 78, 80, 0.1), rgba(216, 30, 91, 0.1));
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Estilos da timeline */
+.timeline {
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(255, 78, 80, 0.2);
+  border-left: 4px solid #ff4e50;
+  transition: background 0.3s ease;
+}
+
+.timeline-item:hover {
+  background: rgba(255, 78, 80, 0.4); /* Efeito de destaque ao passar o mouse */
+}
+
+img {
+    border-radius: 10px;
+}
+
+#message {
+  display: none; /* Inicialmente o texto está oculto */
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Botões interativos */
+button.secret-btn {
+  background: #ff4e50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button.secret-btn:hover {
+  background: #e33d47;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+button.secret-btn:active {
+  transform: scale(0.95);
+}
+
+/* Contagem regressiva */
+.countdown {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #ff4e50;
+}
+
+.countdown.glowing {
+  animation: countdownGlow 1s ease-in-out infinite;
+}
+
+@keyframes countdownGlow {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #ff4e50;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+.header-bg {
+    background-image: url('img/stitch.jpeg'); /* Caminho da sua imagem */
+    background-size: cover;   /* Faz com que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem na tela */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    height: 500px; /* Ajuste a altura conforme necessário */
+    color: white; /* Cor do texto para garantir contraste com a imagem */
+    display: flex; /* Usa Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center; /* Centraliza o texto dentro do header */
+}
