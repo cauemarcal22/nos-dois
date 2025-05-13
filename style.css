@@ -123,3 +123,37 @@ button.secret-btn:active {
     align-items: center; /* Centraliza o conteúdo verticalmente */
     text-align: center; /* Centraliza o texto dentro do header */
 }
+
+/* Efeito de coração caindo */
+@keyframes heart-fall {
+  0% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+  color: red;
+  animation: heart-fall linear infinite;
+}
+
+.heart:nth-child(odd) {
+  animation-duration: 5s;
+}
+
+.heart:nth-child(even) {
+  animation-duration: 7s;
+}
+
+.heart {
+  animation-delay: calc(-1s * var(--i));
+}
+
+
