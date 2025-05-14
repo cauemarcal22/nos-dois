@@ -1,16 +1,26 @@
-// Obtém o link e o texto
-const clickHereLink = document.getElementById('clickHere');
-const message = document.getElementById('message');
+// Função para alternar a visibilidade de um elemento
+function toggleVisibility(buttonId, messageId) {
+  const button = document.getElementById(buttonId);
+  const message = document.getElementById(messageId);
 
-// Adiciona o evento de clique no link
-clickHereLink.addEventListener('click', function() {
-  // Alterna a visibilidade do texto
-  if (message.style.display === 'none') {
-    message.style.display = 'block';  // Exibe o texto
-  } else {
-    message.style.display = 'none';   // Oculta o texto
-  }
-});
+  button.addEventListener('click', function() {
+    // Alterna a visibilidade
+    if (message.style.display === 'none') {
+      message.style.display = 'block'; // Exibe a mensagem
+    } else {
+      message.style.display = 'none'; // Oculta a mensagem
+    }
+  });
+}
+
+// Chama a função para o primeiro botão
+toggleVisibility('clickHere1', 'message1');
+
+// Chama a função para o segundo botão
+toggleVisibility('clickHere2', 'message2');
+ 
+
+
 
 
 // Contagem regressiva
