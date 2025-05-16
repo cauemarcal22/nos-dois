@@ -18,11 +18,10 @@ toggleVisibility('clickHere1', 'message1');
 
 // Chama a função para o segundo botão
 toggleVisibility('clickHere2', 'message2');
- 
 
 toggleVisibility('clickHere3', 'message3');
 
-
+toggleVisibility('clickHere4', 'message4');
 
 
 
