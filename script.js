@@ -82,3 +82,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Criar os corações em intervalos
     setInterval(createHeart, 300);  // Novo coração a cada 300 milissegundos
 });
+
+  // Música ao clicar na imagem
+  const img = document.getElementById('musicImage');
+  const audio = document.getElementById('audioPlayer');
+
+  img.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  });
