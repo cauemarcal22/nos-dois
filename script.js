@@ -27,6 +27,9 @@ toggleVisibility('clickHere5', 'message5');
 
 toggleVisibility('clickHere6', 'message6');
 
+toggleVisibility('clickHere7', 'message7');
+
+
 
 
 // Contagem regressiva
