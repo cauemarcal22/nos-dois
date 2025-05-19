@@ -111,18 +111,22 @@ button.secret-btn:active {
   }
 }
 
+
+
 .header-bg {
-    background-image: url('img/stitch.jpeg'); /* Caminho da sua imagem */
-    background-size: cover;   /* Faz com que a imagem cubra toda a área */
-    background-position: center; /* Centraliza a imagem na tela */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    height: 500px; /* Ajuste a altura conforme necessário */
-    color: white; /* Cor do texto para garantir contraste com a imagem */
-    display: flex; /* Usa Flexbox para centralizar o conteúdo */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center; /* Centraliza o texto dentro do header */
+    background-image: url('img/stitch.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column; /* <- Isso faz os filhos ficarem em coluna (um abaixo do outro) */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 
 /* Efeito de coração caindo */
 @keyframes heart-fall {
