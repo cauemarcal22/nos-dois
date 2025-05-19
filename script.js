@@ -99,3 +99,28 @@ document.addEventListener('DOMContentLoaded', function() {
       audio.currentTime = 0;
     }
   });
+
+  const dataReferencia = new Date("2025-05-19T09:50:00");
+
+    function atualizarContagem() {
+      const agora = new Date();
+      let diferencaMs = agora - dataReferencia;
+
+      // Se ainda não passou da data, mostra contagem negativa
+      const sinal = diferencaMs < 0 ? "-" : "";
+
+      diferencaMs = Math.abs(diferencaMs);
+
+      const segundos = Math.floor((diferencaMs / 1000) % 60);
+      const minutos = Math.floor((diferencaMs / (1000 * 60)) % 60);
+      const horas = Math.floor((diferencaMs / (1000 * 60 * 60)) % 24);
+      const dias = Math.floor(diferencaMs / (1000 * 60 * 60 * 24));
+
+      const formato = `${sinal}${dias}d ${horas}h ${minutos}m ${segundos}s`;
+
+      document.getElementById("timer").textContent = formato;
+    }
+
+    // Atualiza a cada segundo
+    setInterval(atualizarContagem, 1000);
+    atualizarContagem(); // Atualiza imediatamente ao carregar
