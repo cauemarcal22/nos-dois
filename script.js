@@ -29,6 +29,7 @@ toggleVisibility('clickHere6', 'message6');
 
 toggleVisibility('clickHere7', 'message7');
 
+toggleVisibility('clickHere8', 'message8');
 
 
 
@@ -103,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  const dataReferencia = new Date("2025-05-19T14:32:00");
+  const dataReferencia = new Date("2025-05-20T09:54:00");
 
     function atualizarContagem() {
       const agora = new Date();
