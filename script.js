@@ -37,6 +37,8 @@ toggleVisibility('clickHere10', 'message10');
 
 toggleVisibility('clickHere11', 'message11');
 
+toggleVisibility('clickHere12', 'message12');
+
 
 
 
