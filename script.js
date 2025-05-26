@@ -14,6 +14,8 @@ function toggleVisibility(buttonId, messageId) {
 }
 
 // Chama a função para o primeiro botão
+toggleVisibility('clickHere0', 'message0');
+
 toggleVisibility('clickHere1', 'message1');
 
 // Chama a função para o segundo botão
@@ -40,10 +42,6 @@ toggleVisibility('clickHere11', 'message11');
 toggleVisibility('clickHere12', 'message12');
 
 toggleVisibility('clickHere13', 'message13');
-
-
-
-
 
 // Contagem regressiva
 const targetDate = new Date('2025-10-15 00:00:00').getTime();
@@ -116,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  const dataReferencia = new Date("2025-05-25T23:48:00");
+  const dataReferencia = new Date("2025-05-26T09:33:00");
 
     function atualizarContagem() {
       const agora = new Date();
