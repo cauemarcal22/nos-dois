@@ -49,6 +49,10 @@ toggleVisibility('clickHere15', 'message15');
 
 
 
+
+
+
+
 // Contagem regressiva
 const targetDate = new Date('2025-10-15 00:00:00').getTime();
 const countdownEl = document.getElementById('countdown');
@@ -144,3 +148,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // Atualiza a cada segundo
     setInterval(atualizarContagem, 1000);
     atualizarContagem(); // Atualiza imediatamente ao carregar
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Seleciona todos os botões enviar
+  const botoesEnviar = document.querySelectorAll('.enviar-btn');
+
+  botoesEnviar.forEach(function(botao) {
+    botao.addEventListener('click', function() {
+      // Pega o container pai mais próximo (messageXX)
+      const container = botao.closest('div[id^="message"]');
+
+      if (!container) return;
+
+      // Pega o textarea dentro desse container
+      const textarea = container.querySelector('.mensagem-textarea');
+
+      if (!textarea) return;
+
+      const mensagem = textarea.value.trim();
+
+      if (mensagem === '') {
+        alert('Por favor, digite uma mensagem antes de enviar.');
+        return;
+      }
+
+      fetch('https://script.google.com/macros/s/AKfycbyr4bnGV0R5jf5y71m5U3X5iR3x9CoeZ74_fyrUrc4YwLPSkV1MZzzIjqhE3FAE1t0nrA/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `textarea=${encodeURIComponent(mensagem)}`
+      }).then(() => {
+        alert('Mensagem enviada com sucesso!');
+        textarea.value = '';
+      }).catch(() => {
+        alert('Erro ao enviar a mensagem.');
+      });
+    });
+  });
+});
