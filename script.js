@@ -75,6 +75,7 @@ toggleVisibility('clickHere28', 'message28');
 
 toggleVisibility('clickHere29', 'message29');
 
+toggleVisibility('clickHere30', 'message30');
 
 
 // Contagem regressiva
@@ -148,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  const dataReferencia = new Date("2025-06-11T10:56:00");
+  const dataReferencia = new Date("2025-06-12T09:47:00");
 
     function atualizarContagem() {
       const agora = new Date();
