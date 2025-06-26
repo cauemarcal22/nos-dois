@@ -103,6 +103,9 @@ toggleVisibility('clickHere42', 'message42');
 
 toggleVisibility('clickHere43', 'message43');
 
+toggleVisibility('clickHere44', 'message44');
+
+
 
 // Contagem regressiva
 const targetDate = new Date('2025-10-15 00:00:00').getTime();
@@ -175,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  const dataReferencia = new Date("2025-06-25T10:38:00");
+  const dataReferencia = new Date("2025-06-26T10:24:00");
 
     function atualizarContagem() {
       const agora = new Date();
@@ -202,41 +205,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Seleciona todos os botões enviar
   const botoesEnviar = document.querySelectorAll('.enviar-btn');
 
   botoesEnviar.forEach(function(botao) {
     botao.addEventListener('click', function() {
-      // Pega o container pai mais próximo (messageXX)
       const container = botao.closest('div[id^="message"]');
-
       if (!container) return;
 
-      // Pega o textarea dentro desse container
       const textarea = container.querySelector('.mensagem-textarea');
+      const inputData = container.querySelector('.data-input');
 
-      if (!textarea) return;
+      if (!textarea || !inputData) return;
 
       const mensagem = textarea.value.trim();
+      const data = inputData.value;
 
-      if (mensagem === '') {
-        alert('Por favor, digite uma mensagem antes de enviar.');
+      if (mensagem === '' || data === '') {
+        alert('Por favor, preencha todos os campos antes de enviar.');
         return;
       }
 
-      fetch('https://script.google.com/macros/s/AKfycbyr4bnGV0R5jf5y71m5U3X5iR3x9CoeZ74_fyrUrc4YwLPSkV1MZzzIjqhE3FAE1t0nrA/exec', {
+      fetch('https://script.google.com/macros/s/AKfycbzLqe0xhZWgC2ujHnkLphe-A07Bp481tPDhVbim9tRbnWgXQqhOUexnTgTIX1WxJ7vaPA/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: `textarea=${encodeURIComponent(mensagem)}`
+        body: `textarea=${encodeURIComponent(mensagem)}&data=${encodeURIComponent(data)}`
       }).then(() => {
         alert('Mensagem enviada com sucesso!');
         textarea.value = '';
+        inputData.value = '';
       }).catch(() => {
         alert('Erro ao enviar a mensagem.');
       });
     });
   });
 });
+
