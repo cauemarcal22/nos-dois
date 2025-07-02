@@ -115,6 +115,8 @@ toggleVisibility('clickHere48', 'message48');
 
 toggleVisibility('clickHere49', 'message49');
 
+toggleVisibility('clickHere50', 'message50');
+
 
 // Contagem regressiva
 const targetDate = new Date('2025-10-15 00:00:00').getTime();
