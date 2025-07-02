@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  const dataReferencia = new Date("2025-07-01T23:40:00");
+  const dataReferencia = new Date("2025-07-02T12:40:00");
 
     function atualizarContagem() {
       const agora = new Date();
