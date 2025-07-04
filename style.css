@@ -254,3 +254,23 @@ button.secret-btn:active {
   box-shadow: 0 0 8px #ff4e50 !important;
   outline: none !important;
 }
+  .bottom-center {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .btn-custom {
+      background-color: #ff4e50;
+      border-color: #ff4e50;
+    }
+
+    .btn-custom:hover {
+      background-color: #e04345;
+      border-color: #e04345;
+    }
+
+    .btn-divider:not(:first-child) {
+      border-left: 1px solid white;
+    }
