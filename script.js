@@ -76,7 +76,7 @@ if (img && audio) {
 }
 
 // ===== Contador desde uma data específica =====
-const dataReferencia = new Date("2025-07-14T11:52:00");
+const dataReferencia = new Date("2025-07-15T13:18:00");
 const timerEl = document.getElementById("timer");
 
 if (timerEl) {
