@@ -274,3 +274,7 @@ button.secret-btn:active {
     .btn-divider:not(:first-child) {
       border-left: 1px solid white;
     }
+
+    .coracao {
+      height: 30px;
+    }
