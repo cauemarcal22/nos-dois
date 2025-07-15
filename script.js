@@ -10,8 +10,7 @@ function toggleVisibility(buttonId, messageId) {
   }
 }
 
-// Aplica toggle para todos os botões existentes (0 a 51)
-for (let i = 0; i <= 62; i++) {
+for (let i = 0; i <= 63; i++) {
   toggleVisibility(`clickHere${i}`, `message${i}`);
 }
 
@@ -72,7 +71,7 @@ if (img && audio) {
     } else {
       audio.pause();
       audio.currentTime = 0;
-    }
+    } 
   });
 }
 
