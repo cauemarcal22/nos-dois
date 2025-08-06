@@ -10,7 +10,7 @@ function toggleVisibility(buttonId, messageId) {
   }
 }
 
-for (let i = 0; i <= 83; i++) {
+for (let i = 0; i <= 84; i++) {
   toggleVisibility(`clickHere${i}`, `message${i}`);
 }
 
