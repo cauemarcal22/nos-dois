@@ -10,7 +10,7 @@ function toggleVisibility(buttonId, messageId) {
   }
 }
 
-for (let i = 0; i <= 84; i++) {
+for (let i = 0; i <= 85; i++) {
   toggleVisibility(`clickHere${i}`, `message${i}`);
 }
 
@@ -76,7 +76,7 @@ if (img && audio) {
 }
 
 // ===== Contador desde uma data específica =====
-const dataReferencia = new Date("2025-08-06T15:10:00");
+const dataReferencia = new Date("2025-08-07T15:03:00");
 const timerEl = document.getElementById("timer");
 
 if (timerEl) {
@@ -136,4 +136,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
