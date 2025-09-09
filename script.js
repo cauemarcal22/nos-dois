@@ -10,7 +10,7 @@ function toggleVisibility(buttonId, messageId) {
   }
 }
 
-for (let i = 0; i <= 111; i++) {
+for (let i = 0; i <= 117; i++) {
   toggleVisibility(`clickHere${i}`, `message${i}`);
 }
 
@@ -136,3 +136,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
