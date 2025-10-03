@@ -1,40 +1,124 @@
-
-header {
-  background: linear-gradient(135deg, #ff4e50, #d81e5b);
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-  width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
-  position: relative;
-  z-index: 2;
+/* Reset e configurações base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Estilo das seções */
+body {
+  font-family: 'Georgia', 'Palatino', serif;
+  background: linear-gradient(to bottom, #fff5f7, #ffe8ed, #ffd4dd);
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+/* Header romântico */
+header {
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(255, 105, 135, 0.85));
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.3);
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+
+/* Header sem sobreposição rosa */
+.header-bg {
+  background-image: url('img/stitch.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.header-bg h1,
+.header-bg p {
+  position: relative;
+  z-index: 2;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* Seções com espaçamento suave */
 section {
   width: 100%;
-  max-width: 100%;
-  padding: 40px 20px;
+  max-width: 1200px;
+  padding: 60px 30px;
   text-align: center;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 15px rgba(255, 182, 193, 0.2);
 }
 
 section:hover {
-  transform: translateY(-5px); /* Pequeno efeito de elevação ao passar o mouse */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 182, 193, 0.3);
 }
 
-/* Efeito parallax para as seções */
+section h2 {
+  font-size: 2.2rem;
+  color: #d8447c;
+  margin-bottom: 30px;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+}
+
+section h2::after {
+  content: '♡';
+  position: absolute;
+  right: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffb6c1;
+  font-size: 1.5rem;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+section h4 {
+  color: #c7527a;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* Alternância suave de backgrounds */
 section:nth-child(even) {
-  background: linear-gradient(135deg, rgba(255, 78, 80, 0.1), rgba(216, 30, 91, 0.1));
-  background-size: cover;
-  background-attachment: fixed;
+  background: linear-gradient(135deg, rgba(255, 240, 245, 0.9), rgba(255, 228, 237, 0.8));
 }
 
-/* Estilos da timeline */
+section:nth-child(odd) {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 245, 247, 0.8));
+}
+
+/* Timeline romântica */
 .timeline {
   text-align: left;
   max-width: 800px;
@@ -42,239 +126,371 @@ section:nth-child(even) {
 }
 
 .timeline-item {
-  margin-bottom: 20px;
-  padding: 10px;
-  background: rgba(255, 78, 80, 0.2);
-  border-left: 4px solid #ff4e50;
-  transition: background 0.3s ease;
+  margin-bottom: 25px;
+  padding: 20px 25px;
+  background: linear-gradient(to right, rgba(255, 182, 193, 0.15), rgba(255, 218, 224, 0.15));
+  border-left: 5px solid #ffb6c1;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255, 182, 193, 0.1);
 }
 
 .timeline-item:hover {
-  background: rgba(255, 78, 80, 0.4); /* Efeito de destaque ao passar o mouse */
+  background: linear-gradient(to right, rgba(255, 182, 193, 0.25), rgba(255, 218, 224, 0.25));
+  transform: translateX(10px);
+  box-shadow: 0 5px 20px rgba(255, 182, 193, 0.3);
 }
 
+.timeline-item strong {
+  color: #d8447c;
+  font-size: 1.1rem;
+}
+
+/* Imagens com efeito suave */
 img {
-    border-radius: 10px;
+  border-radius: 20px;
+  max-width: 100%;
+  height: auto;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(255, 105, 135, 0.2);
 }
 
-#message {
-  display: none; /* Inicialmente o texto está oculto */
-  margin-top: 10px;
-  font-size: 18px;
-  color: #333;
+img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 12px 35px rgba(255, 105, 135, 0.35);
 }
 
-/* Botões interativos */
-button.secret-btn {
-  background: #ff4e50;
+/* Botão secreto fofo */
+.secret-btn {
+  background: linear-gradient(135deg, #ffb6c1, #ff69a5);
   color: white;
   border: none;
-  padding: 12px 30px;
-  border-radius: 30px;
+  padding: 15px 40px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(255, 105, 165, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-button.secret-btn:hover {
-  background: #e33d47;
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-button.secret-btn:active {
-  transform: scale(0.95);
-}
-
-/* Contagem regressiva */
-.countdown {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 20px 0;
-  color: #ff4e50;
-}
-
-.countdown.glowing {
-  animation: countdownGlow 1s ease-in-out infinite;
-}
-
-@keyframes countdownGlow {
-  0% {
-    color: #fff;
-  }
-  50% {
-    color: #ff4e50;
-  }
-  100% {
-    color: #fff;
-  }
-}
-
-
-
-.header-bg {
-    background-image: url('img/stitch.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 500px;
-    color: white;
-    display: flex;
-    flex-direction: column; /* <- Isso faz os filhos ficarem em coluna (um abaixo do outro) */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-
-/* Efeito de coração caindo */
-@keyframes heart-fall {
-  0% {
-    transform: translateY(-50px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-}
-
-.heart {
+.secret-btn::before {
+  content: '♡';
   position: absolute;
-  top: 0;
-  font-size: 2rem;
-  color: red;
-  animation: heart-fall linear infinite;
+  left: -20px;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
-.heart:nth-child(odd) {
-  animation-duration: 5s;
+.secret-btn:hover::before {
+  left: 15px;
+  opacity: 1;
 }
 
-.heart:nth-child(even) {
-  animation-duration: 7s;
+.secret-btn:hover {
+  background: linear-gradient(135deg, #ff69a5, #ffb6c1);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 105, 165, 0.5);
+  padding-left: 50px;
 }
 
-.heart {
-  animation-delay: calc(-1s * var(--i));
+.secret-btn:active {
+  transform: translateY(-1px) scale(1.02);
 }
 
-   img {
-      max-width: 200px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    img:hover {
-      transform: scale(1.05);
-    }
-
-    audio {
-      display: none;
-    }
-.enviar-btn {
-  background: linear-gradient(45deg, #ff4e50, #d81e5b);
-  border: none;
-  color: white;
-  padding: 12px 25px;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 8px rgba(216, 30, 91, 0.4);
+/* Área de mensagem */
+#message {
+  display: none;
+  margin-top: 20px;
+  padding: 25px;
+  background: linear-gradient(to bottom, rgba(255, 245, 247, 0.95), rgba(255, 228, 237, 0.95));
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(255, 182, 193, 0.2);
+  animation: fadeIn 0.5s ease;
 }
 
-.enviar-btn:hover {
-  background: linear-gradient(45deg, #d81e5b, #ff4e50);
-  box-shadow: 0 6px 12px rgba(255, 78, 80, 0.6);
-}
-
-.mensagem-textarea {
-  border: 2px solid #d81e5b;
-  border-radius: 8px;
-  padding: 10px 15px;
-  font-size: 1rem;
-  resize: vertical; /* permite redimensionar só verticalmente */
-  box-shadow: inset 0 2px 6px rgba(216, 30, 91, 0.2);
-  transition: border-color 0.3s ease;
-}
-
-.mensagem-textarea:focus {
-  border-color: #ff4e50;
-  outline: none;
-  box-shadow: 0 0 8px #ff4e50;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .mb-3 {
   display: flex;
-  flex-direction: column; /* empilha os elementos verticalmente */
-  gap: 10px; /* espaço entre textarea e botão */
-  max-width: 400px;
-  margin: 0 auto;
-}
-.mensagem-textarea.form-control {
-  border: 2px solid #d81e5b !important;
-  border-radius: 8px !important;
-  box-shadow: inset 0 2px 6px rgba(216, 30, 91, 0.2) !important;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 20px auto 0;
 }
 
-.mensagem-textarea.form-control:focus {
-  border-color: #ff4e50 !important;
-  box-shadow: 0 0 8px #ff4e50 !important;
-  outline: none !important;
-}
-
-/* -----------------------------------*/
-
+/* Input de data estilizado */
 .data-input {
-  border: 2px solid #d81e5b;
-  border-radius: 8px;
-  padding: 10px 15px;
+  border: 2px solid #ffb6c1;
+  border-radius: 15px;
+  padding: 12px 20px;
   font-size: 1rem;
-  resize: vertical; /* permite redimensionar só verticalmente */
-  box-shadow: inset 0 2px 6px rgba(216, 30, 91, 0.2);
-  transition: border-color 0.3s ease;
+  background: white;
+  box-shadow: inset 0 2px 8px rgba(255, 182, 193, 0.15);
+  transition: all 0.3s ease;
+  font-family: 'Georgia', serif;
 }
 
 .data-input:focus {
-  border-color: #ff4e50;
+  border-color: #ff69a5;
   outline: none;
-  box-shadow: 0 0 8px #ff4e50;
+  box-shadow: 0 0 15px rgba(255, 105, 165, 0.3);
+  transform: translateY(-2px);
 }
 
-.data-input.form-control {
-  border: 2px solid #d81e5b !important;
-  border-radius: 8px !important;
-  box-shadow: inset 0 2px 6px rgba(216, 30, 91, 0.2) !important;
+/* Textarea de mensagem */
+.mensagem-textarea {
+  border: 2px solid #ffb6c1;
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 120px;
+  background: white;
+  box-shadow: inset 0 2px 8px rgba(255, 182, 193, 0.15);
+  transition: all 0.3s ease;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
 }
 
-.data-input.form-control:focus {
-  border-color: #ff4e50 !important;
-  box-shadow: 0 0 8px #ff4e50 !important;
-  outline: none !important;
+.mensagem-textarea:focus {
+  border-color: #ff69a5;
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 105, 165, 0.3);
+  transform: translateY(-2px);
 }
-  .bottom-center {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
 
-    .btn-custom {
-      background-color: #ff4e50;
-      border-color: #ff4e50;
-    }
+.mensagem-textarea::placeholder {
+  color: #d8a3b3;
+  font-style: italic;
+}
 
-    .btn-custom:hover {
-      background-color: #e04345;
-      border-color: #e04345;
-    }
+/* Botão enviar romântico */
+.enviar-btn {
+  background: linear-gradient(135deg, #ff69a5, #d8447c);
+  border: none;
+  color: white;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(216, 68, 124, 0.4);
+  position: relative;
+  overflow: hidden;
+}
 
-    .btn-divider:not(:first-child) {
-      border-left: 1px solid white;
-    }
+.enviar-btn::after {
+  content: '✉';
+  position: absolute;
+  right: -20px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
 
-    .coracao {
-      height: 30px;
-    }
+.enviar-btn:hover {
+  background: linear-gradient(135deg, #d8447c, #ff69a5);
+  box-shadow: 0 8px 25px rgba(255, 105, 165, 0.6);
+  transform: translateY(-3px);
+  padding-right: 45px;
+}
+
+.enviar-btn:hover::after {
+  right: 15px;
+  opacity: 1;
+}
+
+.enviar-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Contagem regressiva */
+.countdown {
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin: 30px 0;
+  color: #d8447c;
+  text-shadow: 2px 2px 10px rgba(255, 182, 193, 0.5);
+  letter-spacing: 3px;
+}
+
+/* Lista de planos */
+#futuro ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#futuro ul li {
+  background: linear-gradient(to right, rgba(255, 240, 245, 0.8), rgba(255, 228, 237, 0.6));
+  margin: 15px 0;
+  padding: 15px 25px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border-left: 4px solid #ffb6c1;
+  box-shadow: 0 3px 10px rgba(255, 182, 193, 0.15);
+}
+
+#futuro ul li:hover {
+  transform: translateX(10px);
+  background: linear-gradient(to right, rgba(255, 240, 245, 1), rgba(255, 228, 237, 0.9));
+  box-shadow: 0 5px 20px rgba(255, 182, 193, 0.3);
+}
+
+/* Carrossel Bootstrap personalizado */
+.carousel {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 105, 165, 0.3);
+}
+
+.carousel-inner {
+  border-radius: 20px;
+}
+
+.carousel-caption h5 {
+  background-color: rgba(216, 68, 124, 0.75) !important;
+  padding: 10px 20px !important;
+  border-radius: 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* Botões de navegação entre páginas */
+.bottom-center {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.btn-custom {
+  background: linear-gradient(135deg, #ffb6c1, #ff69a5);
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+}
+
+.btn-custom:hover {
+  background: linear-gradient(135deg, #ff69a5, #d8447c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 105, 165, 0.5);
+  color: white;
+}
+
+.btn-divider:not(:first-child) {
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Animação de batimento de coração */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+  }
+  25% {
+    transform: translateY(-50%) scale(1.2);
+  }
+  50% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+/* Efeito de brilho suave */
+@keyframes softGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 105, 165, 0.5);
+  }
+}
+
+/* Iframe Spotify */
+iframe {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+  transition: transform 0.3s ease;
+}
+
+iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(255, 105, 165, 0.4);
+}
+
+
+/* Header without pink overlay */
+.header-bg {
+  background-image: url('img/stitch.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.header-bg h1,
+.header-bg p {
+  position: relative;
+  z-index: 2;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Animação sutil de entrada */
+section {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Corações decorativos */
+.coracao {
+  height: 30px;
+  filter: drop-shadow(0 2px 5px rgba(255, 182, 193, 0.5));
+}
