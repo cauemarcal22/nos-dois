@@ -81,6 +81,63 @@ section h4 {
   margin-bottom: 20px;
 }
 
+.section-08-10 {
+  max-width: 800px;
+  padding: 50px 30px;
+  text-align: center;
+  margin: 30px auto;
+  background: linear-gradient(45deg, #fff, #fff,#ffffff,  #88765c);
+  border-radius: 12px;
+  border: 1px solid #ffe8ed;
+}
+
+.secret-btn-08-10 {
+  background: linear-gradient(65deg, #d9a7b8, #d9a7b8, #aa926f);
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.h2-08-10 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 25px;
+
+  /* gradiente no fundo */
+  background: linear-gradient(90deg, #b47892,#b47892, #b47892, #aa926f, #533d1c);
+  
+  /* faz o texto "pegar" o gradiente */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.enviar-btn-08-10 {
+  background: linear-gradient(250deg, #d9a7b8, #d9a7b8, #aa926f);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 300;
+}
+
+.enviar-btn-08-10:hover {
+  background: linear-gradient(45deg, #d9a7b8, #d9a7b8, #aa926f);
+  transform: translateY(-2px);
+}
+
+.secret-btn-08-10:hover {
+  background: linear-gradient(45deg, #d9a7b8, #d9a7b8, #aa926f);
+  transform: translateY(-2px);
+}
+
 /* Timeline delicada */
 .timeline {
   text-align: left;
