@@ -152,6 +152,12 @@ img {
   font-weight: 300;
 }
 
+.h4-10-10 {
+  font-size: 1.5rem;
+  color: #dfd2ba;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
 
 .secret-btn-10-10:hover {
   background: linear-gradient(45deg, #3d2817, #8b6f47, #8b6f47, #8b6f47, #3d2817);
