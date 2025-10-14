@@ -126,6 +126,192 @@ img {
   font-weight: 300;
 }
 
+/* Seção especial 13-10 */
+
+.section-13-10 {
+  max-width: 800px;
+  padding: 50px 30px;
+  text-align: center;
+  margin: 30px auto 80px;
+  background: #ffffff;
+  border-radius: 12px;
+  background: linear-gradient(65deg, #8b6f47, #ffffff, #ffffff, #ffffff);
+}
+
+.h2-13-10 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #8b6f47, #d9a7b8, #d9a7b8, #d9a7b8, #d9a7b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Suporte para navegadores modernos */
+  background-clip: text;
+  color: transparent;
+
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+
+.secret-btn-13-10:hover {
+  background: linear-gradient(45deg, #3d2817, #d9a7b8, #d9a7b8, #d9a7b8, #d9a7b8);
+  transform: translateY(-2px);
+}
+
+.secret-btn-13-10 {
+  background: linear-gradient(45deg, #3d2817, #d9a7b8, #d9a7b8, #d9a7b8, #d9a7b8);
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.enviar-btn-13-10 {
+  background: linear-gradient(45deg, #d9a7b8, #d9a7b8, #d9a7b8, #d9a7b8, #3d2817);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 300;
+}
+
+.enviar-btn-13-10:hover {
+  background: linear-gradient(45deg, #d9a7b8, #d9a7b8, #d9a7b8, #d9a7b8, #3d2817);
+  transform: translateY(-2px);
+}
+
+/* Seção especial 12-10 */
+
+.section-12-10 {
+  max-width: 800px;
+  padding: 50px 30px;
+  text-align: center;
+  margin: 30px auto 80px;
+  background: #ffffff;
+  border-radius: 12px;
+  background: linear-gradient(65deg, #3d2817, #8b6f47, #fff, #fff);
+}
+
+.h2-12-10 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #8b6f47, #3d2817, #3d2817, #d9a7b8, #d9a7b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Suporte para navegadores modernos */
+  background-clip: text;
+  color: transparent;
+
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+
+.secret-btn-12-10:hover {
+  background: linear-gradient(45deg, #3d2817, #8b6f47, #8b6f47, #d9a7b8, #d9a7b8);
+  transform: translateY(-2px);
+}
+
+.secret-btn-12-10 {
+  background: linear-gradient(45deg, #3d2817, #8b6f47, #8b6f47, #d9a7b8, #d9a7b8);
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.enviar-btn-12-10 {
+  background: linear-gradient(45deg, #d9a7b8, #d9a7b8, #8b6f47, #8b6f47, #3d2817);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 300;
+}
+
+.enviar-btn-12-10:hover {
+  background: linear-gradient(45deg, #d9a7b8, #d9a7b8, #8b6f47, #8b6f47, #3d2817);
+  transform: translateY(-2px);
+}
+
+/* Seção especial 11-10 */
+
+.section-11-10 {
+  max-width: 800px;
+  padding: 50px 30px;
+  text-align: center;
+  margin: 30px auto 80px;
+  background: #ffffff;
+  border-radius: 12px;
+  background: linear-gradient(245deg, #fff, #a18863, #8b6f47, #3d2817);
+}
+
+.h2-11-10 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #8b6f47, #3d2817, #3d2817, #d9a7b8, #d9a7b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Suporte para navegadores modernos */
+  background-clip: text;
+  color: transparent;
+
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+.p-especial {
+  color: #ffffff;
+}
+
+.secret-btn-11-10:hover {
+  background: linear-gradient(45deg, #3d2817, #8b6f47, #8b6f47, #ac9473, #d9a7b8);
+  transform: translateY(-2px);
+}
+
+.secret-btn-11-10 {
+  background: linear-gradient(45deg, #3d2817, #8b6f47, #8b6f47, #ac9473, #d9a7b8);
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.enviar-btn-11-10 {
+  background: linear-gradient(45deg, #d9a7b8, #ac9473, #8b6f47, #8b6f47, #3d2817);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 300;
+}
+
+.enviar-btn-11-10:hover {
+  background: linear-gradient(45deg, #d9a7b8, #ac9473, #8b6f47, #8b6f47, #3d2817);
+  transform: translateY(-2px);
+}
+
 /* Seção especial 10-10 */
 
 .section-10-10 {
