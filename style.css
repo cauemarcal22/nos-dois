@@ -728,3 +728,301 @@ iframe {
   border-radius: 12px;
 }
 
+.anniversary-section-15-10-2025 {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ca4291 0%, #9464c4 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anniversary-container-15-10-2025 {
+  max-width: 600px;
+  width: 100%;
+}
+
+.anniversary-header-15-10-2025 {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown-15-10-2025 0.8s ease;
+}
+
+.heart-icon-15-10-2025 {
+  font-size: 60px;
+  animation: heartbeat-15-10-2025 1.5s infinite;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+@keyframes heartbeat-15-10-2025 {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+}
+
+.anniversary-title-15-10-2025 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.anniversary-subtitle-15-10-2025 {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0 0 0;
+  letter-spacing: 2px;
+}
+
+.anniversary-content-15-10-2025 {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp-15-10-2025 0.8s ease;
+}
+
+.secret-btn-15-10-2025 {
+  width: 100%;
+  padding: 18px 30px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+.secret-btn-15-10-2025:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+}
+
+.secret-btn-15-10-2025:active {
+  transform: translateY(0);
+}
+
+.btn-icon-15-10-2025 {
+  font-size: 24px;
+  animation: bounce-15-10-2025 2s infinite;
+}
+
+@keyframes bounce-15-10-2025 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.message-container-15-10-2025 {
+  margin-top: 30px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.message-container-15-10-2025.show {
+  opacity: 1;
+  max-height: none;
+  overflow: visible;
+}
+
+.message-box-15-10-2025 {
+  animation: scaleIn-15-10-2025 0.5s ease;
+}
+
+@keyframes scaleIn-15-10-2025 {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.message-title-15-10-2025 {
+  color: #764ba2;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+.form-group-15-10-2025 {
+  margin-bottom: 20px;
+}
+
+.form-group-15-10-2025 label {
+  display: block;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.date-input-15-10-2025 {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.date-input-15-10-2025:focus {
+  outline: none;
+  border-color: #764ba2;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+}
+
+.message-textarea-15-10-2025 {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  line-height: 1.6;
+  min-height: 150px;
+  box-sizing: border-box;
+}
+
+.message-textarea-15-10-2025:focus {
+  outline: none;
+  border-color: #764ba2;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+}
+
+.send-btn-15-10-2025 {
+  width: 100%;
+  padding: 16px 30px;
+  background: linear-gradient(135deg, #c93bdb 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+  margin-top: 10px;
+}
+
+.send-btn-15-10-2025:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(118, 75, 162, 0.6);
+}
+
+.send-btn-15-10-2025:active {
+  transform: translateY(0);
+}
+
+.send-icon-15-10-2025 {
+  font-size: 22px;
+}
+
+.success-message-15-10-2025 {
+  background: linear-gradient(135deg, #d650e2 0%, #ca2dc2 100%);
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: slideInUp-15-10-2025 0.5s ease;
+}
+
+.success-message-15-10-2025.show {
+  display: flex;
+}
+
+.success-icon-15-10-2025 {
+  font-size: 24px;
+  animation: rotate-15-10-2025 1s ease;
+}
+
+@keyframes rotate-15-10-2025 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInDown-15-10-2025 {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp-15-10-2025 {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp-15-10-2025 {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .anniversary-section-15-10-2025 {
+    padding: 20px 15px;
+  }
+  
+  .anniversary-content-15-10-2025 {
+    padding: 30px 20px;
+  }
+  
+  .anniversary-title-15-10-2025 {
+    font-size: 26px;
+  }
+  
+  .anniversary-subtitle-15-10-2025 {
+    font-size: 18px;
+  }
+  
+  .heart-icon-15-10-2025 {
+    font-size: 50px;
+  }
+}
