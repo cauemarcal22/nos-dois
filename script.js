@@ -10,7 +10,7 @@ function toggleVisibility(buttonId, messageId) {
   }
 }
 
-for (let i = 0; i <= 153; i++) {
+for (let i = 0; i <= 154; i++) {
   toggleVisibility(`clickHere${i}`, `message${i}`);
 }
 
@@ -76,7 +76,7 @@ if (img && audio) {
 }
 
 // ===== Contador desde uma data específica =====
-const dataReferencia = new Date("2025-10-14T13:00:00");
+const dataReferencia = new Date("2025-10-15T13:57:00");
 const timerEl = document.getElementById("timer");
 
 if (timerEl) {
@@ -134,5 +134,73 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Erro ao enviar a mensagem.');
       });
     });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const clickBtn = document.getElementById('clickHere154');
+  const messageContainer = document.getElementById('message154');
+  const sendBtn = document.getElementById('sendBtn154');
+  const successMessage = document.getElementById('successMessage154');
+  const dateInput = document.getElementById('dateInput154');
+  const messageText = document.getElementById('messageText154');
+
+  // Toggle da mensagem
+  clickBtn.addEventListener('click', function() {
+    if (messageContainer.classList.contains('show')) {
+      messageContainer.classList.remove('show');
+      clickBtn.innerHTML = '<span class="btn-icon-15-10-2025">💌</span><span class="btn-text-15-10-2025">Abrir Mensagem Especial</span>';
+    } else {
+      messageContainer.classList.add('show');
+      clickBtn.innerHTML = '<span class="btn-icon-15-10-2025">❌</span><span class="btn-text-15-10-2025">Fechar</span>';
+    }
+  });
+
+  // Enviar mensagem
+  sendBtn.addEventListener('click', function() {
+    const date = dateInput.value;
+    const message = messageText.value.trim();
+
+    if (!date) {
+      alert('Por favor, selecione a data da mensagem.');
+      dateInput.focus();
+      return;
+    }
+
+    if (!message) {
+      alert('Por favor, escreva sua mensagem de amor.');
+      messageText.focus();
+      return;
+    }
+
+    // Animação do botão
+    sendBtn.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      sendBtn.style.transform = 'scale(1)';
+    }, 100);
+
+    // Aqui você pode adicionar a lógica para salvar a mensagem
+    console.log('Data:', date);
+    console.log('Mensagem:', message);
+
+    // Mostrar mensagem de sucesso
+    successMessage.classList.add('show');
+
+    // Limpar campos após 2 segundos
+    setTimeout(() => {
+      dateInput.value = '';
+      messageText.value = '';
+      
+      // Esconder mensagem de sucesso após mais 1 segundo
+      setTimeout(() => {
+        successMessage.classList.remove('show');
+      }, 1000);
+    }, 2000);
+  });
+
+  // Efeito de digitação no textarea
+  messageText.addEventListener('input', function() {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
   });
 });
