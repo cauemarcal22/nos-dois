@@ -138,12 +138,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const clickBtn = document.getElementById('clickHere154');
-  const messageContainer = document.getElementById('message154');
-  const sendBtn = document.getElementById('sendBtn154');
-  const successMessage = document.getElementById('successMessage154');
-  const dateInput = document.getElementById('dateInput154');
-  const messageText = document.getElementById('messageText154');
+  const clickBtn = document.getElementById('clickHere15-10-2025');
+  const messageContainer = document.getElementById('message15-10-2025');
+  const sendBtn = document.getElementById('sendBtn15-10-2025');
+  const successMessage = document.getElementById('successMessage15-10-2025');
+  const dateInput = document.getElementById('dateInput15-10-2025');
+  const messageText = document.getElementById('messageText15-10-2025');
 
   // Toggle da mensagem
   clickBtn.addEventListener('click', function() {
