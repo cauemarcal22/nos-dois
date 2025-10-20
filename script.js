@@ -10,14 +10,14 @@ function toggleVisibility(buttonId, messageId) {
   }
 }
 
-for (let i = 0; i <= 156; i++) {
+for (let i = 0; i <= 159; i++) {
   toggleVisibility(`clickHere${i}`, `message${i}`);
 }
 
 // ===== Contagem regressiva para uma data =====
 const countdownEl = document.getElementById('countdown');
 if (countdownEl) {
-  const targetDate = new Date('2025-10-15 00:00:00').getTime();
+  const targetDate = new Date('2026-10-15 00:00:00').getTime();
 
   setInterval(() => {
     const now = new Date().getTime();
@@ -76,7 +76,7 @@ if (img && audio) {
 }
 
 // ===== Contador desde uma data específica =====
-const dataReferencia = new Date("2025-10-17T13:16:00");
+const dataReferencia = new Date("2025-10-20T14:41:00");
 const timerEl = document.getElementById("timer");
 
 if (timerEl) {
