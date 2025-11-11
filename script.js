@@ -10,7 +10,7 @@ function toggleVisibility(buttonId, messageId) {
   }
 }
 
-for (let i = 0; i <= 180; i++) {
+for (let i = 0; i <= 181; i++) {
   toggleVisibility(`clickHere${i}`, `message${i}`);
 }
 
@@ -76,7 +76,7 @@ if (img && audio) {
 }
 
 // ===== Contador desde uma data específica =====
-const dataReferencia = new Date("2025-11-10T10:43:00");
+const dataReferencia = new Date("2025-11-11T12:05:00");
 const timerEl = document.getElementById("timer");
 
 if (timerEl) {
