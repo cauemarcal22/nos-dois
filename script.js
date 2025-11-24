@@ -1,3 +1,29 @@
+// ===== Modo Noturno =====
+document.addEventListener('DOMContentLoaded', function() {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  if (darkModeToggle) {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      darkModeToggle.textContent = '🌑';
+    }
+
+    darkModeToggle.addEventListener('click', function() {
+      body.classList.toggle('dark-mode');
+
+      if (body.classList.contains('dark-mode')) {
+        darkModeToggle.textContent = '🌑';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        darkModeToggle.textContent = '🌕';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  }
+});
+
 // ===== Alternar visibilidade de mensagens =====
 function toggleVisibility(buttonId, messageId) {
   const button = document.getElementById(buttonId);
@@ -10,7 +36,7 @@ function toggleVisibility(buttonId, messageId) {
   }
 }
 
-for (let i = 0; i <= 191; i++) {
+for (let i = 0; i <= 194; i++) {
   toggleVisibility(`clickHere${i}`, `message${i}`);
 }
 
@@ -76,7 +102,7 @@ if (img && audio) {
 }
 
 // ===== Contador desde uma data específica =====
-const dataReferencia = new Date("2025-11-21T12:03:00");
+const dataReferencia = new Date("2025-11-24T14:58:00");
 const timerEl = document.getElementById("timer");
 
 if (timerEl) {
