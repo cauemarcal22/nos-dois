@@ -9,20 +9,80 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-primary: #fff9fb;
+  --bg-secondary: #ffffff;
+  --text-primary: #4a4a4a;
+  --text-secondary: #5a5a5a;
+  --border-color: #ffe8ed;
+  --accent-primary: #d9a7b8;
+  --accent-hover: #c99aad;
+  --timeline-bg: #fff9fb;
+  --timeline-border: #e8b4c8;
+  --input-bg: white;
+  --input-border: #e8b4c8;
+  --section-h2: #b47892;
+  --section-h4: #8b7a8a;
+}
+
+body.dark-mode {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border-color: #3d3d3d;
+  --accent-primary: #ff91b9;
+  --accent-hover: #ff7ba5;
+  --timeline-bg: #262626;
+  --timeline-border: #ff91b9;
+  --input-bg: #2d2d2d;
+  --input-border: #ff91b9;
+  --section-h2: #ff91b9;
+  --section-h4: #ffc4d6;
+}
+
 body {
   font-family: 'Georgia', 'Palatino', serif;
-  background: #fff9fb;
-  color: #4a4a4a;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--accent-primary);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+  background: var(--accent-hover);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Header romântico suave */
 header {
-  background: #ffffff;
-  color: #5a5a5a;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
   padding: 60px 20px;
   text-align: center;
-  border-bottom: 1px solid #ffe8ed;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .header-bg {
@@ -55,6 +115,7 @@ header p {
   font-size: 1.1rem;
   opacity: 0.85;
   font-style: italic;
+  color: #ffffff;
 }
 
 /* Seções limpas e românticas */
@@ -63,22 +124,25 @@ section {
   padding: 50px 30px;
   text-align: center;
   margin: 30px auto;
-  background: #ffffff;
+  background: var(--bg-secondary);
   border-radius: 12px;
-  border: 1px solid #ffe8ed;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 section h2 {
   font-size: 2rem;
-  color: #b47892;
+  color: var(--section-h2);
   margin-bottom: 25px;
   font-weight: 300;
+  transition: color 0.3s ease;
 }
 
 section h4 {
-  color: #8b7a8a;
+  color: var(--section-h4);
   font-weight: 300;
   margin-bottom: 20px;
+  transition: color 0.3s ease;
 }
 
 /* Timeline delicada */
@@ -91,10 +155,10 @@ section h4 {
 .timeline-item {
   margin-bottom: 20px;
   padding: 15px 20px;
-  background: #fff9fb;
-  border-left: 3px solid #e8b4c8;
+  background: var(--timeline-bg);
+  border-left: 3px solid var(--timeline-border);
   border-radius: 6px;
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .timeline-item:hover {
@@ -102,8 +166,9 @@ section h4 {
 }
 
 .timeline-item strong {
-  color: #b47892;
+  color: var(--section-h2);
   font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 /* Imagens suaves */
@@ -115,7 +180,7 @@ img {
 
 /* Botão secreto delicado */
 .secret-btn {
-  background: #d9a7b8;
+  background: var(--accent-primary);
   color: white;
   border: none;
   padding: 12px 35px;
@@ -568,7 +633,7 @@ img {
 /*Fim*/
 
 .secret-btn:hover {
-  background: #c99aad;
+  background: var(--accent-hover);
   transform: translateY(-2px);
 }
 
@@ -577,9 +642,10 @@ img {
   display: none;
   margin-top: 20px;
   padding: 20px;
-  background: #fff9fb;
+  background: var(--timeline-bg);
   border-radius: 12px;
-  border: 1px solid #ffe8ed;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
 .mb-3 {
@@ -593,18 +659,19 @@ img {
 /* Inputs românticos */
 .data-input,
 .mensagem-textarea {
-  border: 1px solid #e8b4c8;
+  border: 1px solid var(--input-border);
   border-radius: 8px;
   padding: 10px 15px;
   font-size: 1rem;
-  background: white;
+  background: var(--input-bg);
+  color: var(--text-primary);
   font-family: 'Georgia', serif;
-  transition: border-color 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .data-input:focus,
 .mensagem-textarea:focus {
-  border-color: #d9a7b8;
+  border-color: var(--accent-primary);
   outline: none;
 }
 
@@ -621,7 +688,7 @@ img {
 
 /* Botão enviar */
 .enviar-btn {
-  background: #d9a7b8;
+  background: var(--accent-primary);
   border: none;
   color: white;
   padding: 12px 30px;
@@ -633,7 +700,7 @@ img {
 }
 
 .enviar-btn:hover {
-  background: #c99aad;
+  background: var(--accent-hover);
   transform: translateY(-2px);
 }
 
@@ -642,7 +709,8 @@ img {
   font-size: 2.5rem;
   font-weight: 300;
   margin: 30px 0;
-  color: #b47892;
+  color: var(--section-h2);
+  transition: color 0.3s ease;
 }
 
 /* Lista de planos */
@@ -654,13 +722,13 @@ img {
 }
 
 #futuro ul li {
-  background: #fff9fb;
+  background: var(--timeline-bg);
   margin: 12px 0;
   padding: 12px 20px;
   border-radius: 6px;
   font-size: 1rem;
-  border-left: 3px solid #e8b4c8;
-  transition: transform 0.2s ease;
+  border-left: 3px solid var(--timeline-border);
+  transition: all 0.3s ease;
 }
 
 #futuro ul li:hover {
@@ -705,7 +773,7 @@ img {
 }
 
 .btn-custom {
-  background: #d9a7b8;
+  background: var(--accent-primary);
   border: none;
   color: white;
   padding: 10px 22px;
@@ -715,7 +783,7 @@ img {
 }
 
 .btn-custom:hover {
-  background: #c99aad;
+  background: var(--accent-hover);
   color: white;
 }
 
