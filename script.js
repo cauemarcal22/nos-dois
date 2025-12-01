@@ -12,12 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     darkModeToggle.addEventListener('click', function() {
       body.classList.toggle('dark-mode');
+      const isChristmas = body.classList.contains('christmas-theme');
 
       if (body.classList.contains('dark-mode')) {
-        darkModeToggle.textContent = '🌑';
+        darkModeToggle.textContent = isChristmas ? '🌟' : '🌑';
         localStorage.setItem('theme', 'dark');
       } else {
-        darkModeToggle.textContent = '🌕';
+        darkModeToggle.textContent = isChristmas ? '❄️' : '🌕';
         localStorage.setItem('theme', 'light');
       }
     });
@@ -65,25 +66,40 @@ if (countdownEl) {
   }, 1000);
 }
 
-// ===== Corações caindo =====
+// ===== Corações caindo ou flocos de neve (natalino) =====
 document.addEventListener('DOMContentLoaded', function () {
   const heartContainer = document.body;
-  const heartCount = 50;
+  const isChristmas = document.body.classList.contains('christmas-theme');
 
-  function createHeart() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.innerHTML = '❤️';
+  function createFallingElement() {
+    const element = document.createElement('div');
+    element.classList.add(isChristmas ? 'snowflake' : 'heart');
+    element.innerHTML = isChristmas ? '❄️' : '❤️';
+    element.style.position = 'fixed';
+    element.style.fontSize = (Math.random() * 15 + 15) + 'px';
+    element.style.left = Math.random() * window.innerWidth + 'px';
+    element.style.top = '-50px';
+    element.style.opacity = Math.random() * 0.5 + 0.3;
+    element.style.pointerEvents = 'none';
+    element.style.zIndex = '998';
+    element.style.animation = `fall ${Math.random() * 3 + 7}s linear`;
 
-    const randomX = Math.random() * window.innerWidth;
-    heart.style.left = `${randomX}px`;
-    heart.style.setProperty('--i', Math.random() * 5);
-
-    heartContainer.appendChild(heart);
-    setTimeout(() => heart.remove(), 7000);
+    heartContainer.appendChild(element);
+    setTimeout(() => element.remove(), 10000);
   }
 
-  setInterval(createHeart, 300);
+  setInterval(createFallingElement, isChristmas ? 200 : 300);
+
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  `;
+  document.head.appendChild(style);
 });
 
 // ===== Música ao clicar na imagem =====
