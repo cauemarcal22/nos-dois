@@ -118,7 +118,7 @@ if (img && audio) {
 }
 
 // ===== Contador desde uma data específica =====
-const dataReferencia = new Date("2025-12-04T13:39:00");
+const dataReferencia = new Date("2025-12-08T15:07:00");
 const timerEl = document.getElementById("timer");
 
 if (timerEl) {
@@ -246,3 +246,4 @@ document.addEventListener('DOMContentLoaded', function() {
     this.style.height = (this.scrollHeight) + 'px';
   });
 });
+
