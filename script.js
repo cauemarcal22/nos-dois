@@ -107,6 +107,21 @@ const img = document.getElementById('musicImage');
 const audio = document.getElementById('audioPlayer');
 
 if (img && audio) {
+  const tentarAutoplay = () => {
+    audio.play().catch(() => {
+      const liberarNoPrimeiroToque = () => {
+        audio.play().catch(() => {});
+        document.removeEventListener('click', liberarNoPrimeiroToque);
+        document.removeEventListener('touchstart', liberarNoPrimeiroToque);
+      };
+
+      document.addEventListener('click', liberarNoPrimeiroToque, { once: true });
+      document.addEventListener('touchstart', liberarNoPrimeiroToque, { once: true });
+    });
+  };
+
+  tentarAutoplay();
+
   img.addEventListener('click', () => {
     if (audio.paused) {
       audio.play();
