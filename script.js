@@ -133,7 +133,7 @@ if (img && audio) {
 }
 
 // ===== Contador desde uma data específica =====
-const dataReferencia = new Date("2026-04-15T12:28:00");
+const dataReferencia = new Date("2026-04-16T14:46:00");
 const timerEl = document.getElementById("timer");
 
 if (timerEl) {
